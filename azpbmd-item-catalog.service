@@ -1,0 +1,24 @@
+[Unit]
+Description=AZPBMD idle item-catalog scanner
+After=network-online.target
+# Do not block Minecraft. This is a background read of world files.
+
+[Service]
+Type=simple
+User=wilder0p
+Group=minecraft
+Nice=19
+IOSchedulingClass=idle
+IOSchedulingPriority=7
+WorkingDirectory=/mnt/pool/projects/mc-plugin-scanner
+Environment=HOME=/home/wilder0p
+Environment=AZPBMD_SSH_HOST=montreal-vps
+ExecStart=/mnt/pool/projects/mc-plugin-scanner/run-scan.sh
+Restart=on-failure
+RestartSec=120
+# World is large; a full pass can take days.
+TimeoutStopSec=90
+KillSignal=SIGTERM
+
+[Install]
+WantedBy=multi-user.target

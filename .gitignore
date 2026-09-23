@@ -1,0 +1,6 @@
+output/
+cache/
+venv/
+*.pyc
+__pycache__/
+custom_stats.db
