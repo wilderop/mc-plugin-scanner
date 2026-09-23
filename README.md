@@ -1,3 +1,8 @@
+<!-- azpbmd-live -->
+**Live:** not a Minecraft plugin
+
+Host-side catalog scanner. No game server loads it.
+<!-- /azpbmd-live -->
 # AZPBMD item catalog scanner
 
 Read-only scan of survival playerdata and Anvil region/entity files. Builds a public catalog of non-vanilla items for dontplaythisserver.com.
